@@ -72,15 +72,15 @@ const products = [
     numReviews: 12,
   },
   {
-    name: "Samsung Galaxy S23 Ultra",
-    image: "/images/galaxy_s23_ultra.jpg",
-    description: "Flagship smartphone with a 200 MP camera, S Pen support, and Snapdragon 8 Gen 2 chip.",
-    brand: "Samsung",
-    category: "Electronics",
+    name: 'Samsung Galaxy S23 Ultra',
+    image: '/images/galaxy_s23_ultra.jpg',
+    description: 'Flagship smartphone with a 200 MP camera, S Pen support, and Snapdragon 8 Gen 2 chip.',
+    brand: 'Samsung',
+    category: 'Electronics',
     price: 1199.99,
     countInStock: 15,
     rating: 4.7,
-    numReviews: 25
+    numReviews: 25,
   },
 ];
 
