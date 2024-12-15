@@ -82,6 +82,17 @@ const products = [
     rating: 4.7,
     numReviews: 25,
   },
+  {
+  name: 'Meta Quest 3 VR Headset',
+  image: '/images/meta_quest_3.jpg',
+  description: 'Next-gen VR headset with high-resolution color mixed reality, 120Hz refresh rate, and powerful Snapdragon XR2 Gen 2 processor for an immersive experience.',
+  brand: 'Meta',
+  category: 'Virtual Reality',
+  price: 499.99,
+  countInStock: 20,
+  rating: 4.8,
+  numReviews: 45,
+  },
 ];
 
 export default products;
