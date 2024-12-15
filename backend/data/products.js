@@ -93,6 +93,29 @@ const products = [
   rating: 4.8,
   numReviews: 45,
   },
+  {
+    name: 'Office Setup Bundle - Mobile, Tablet & Laptop',
+    image: '/images/office_setup_bundle.jpg',
+    description: 'Complete office setup featuring a high-performance laptop, a sleek tablet for on-the-go tasks, and a smartphone for seamless communication. Ideal for productivity and multitasking.',
+    brand: 'TechPro',
+    category: 'Electronics',
+    price: 1299.99,
+    countInStock: 15,
+    rating: 4.7,
+    numReviews: 32,
+  },
+
+{
+  name: 'iPhone 14 Pro',
+  image: '/images/iphone_14_pro.jpg',
+  description: 'The iPhone 14 Pro features a stunning Super Retina XDR display, advanced A16 Bionic chip, and a pro-level camera system with 48MP resolution. Experience cutting-edge performance and dynamic island design.',
+  brand: 'Apple',
+  category: 'Electronics',
+  price: 999.99,
+  countInStock: 20,
+  rating: 4.8,
+  numReviews: 45,
+},
 ];
 
 export default products;
