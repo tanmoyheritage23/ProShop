@@ -10,11 +10,11 @@ import ProductCarousel from '../components/ProductCarousel';
 import Meta from '../components/Meta';
 
 const HomeScreen = () => {
-  const { pageNumber, keyword } = useParams();
+  const { pageNumber = 1, keyword } = useParams();  // Default page number to 1
 
   const { data, isLoading, error } = useGetProductsQuery({
     keyword,
-    pageNumber,
+    pageNumber: parseInt(pageNumber),  // Ensure pageNumber is parsed as a number
   });
 
   return (
