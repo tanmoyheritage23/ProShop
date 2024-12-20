@@ -8,13 +8,14 @@ import Message from '../components/Message';
 import Paginate from '../components/Paginate';
 import ProductCarousel from '../components/ProductCarousel';
 import Meta from '../components/Meta';
+import Testimonials from '../components/Testimonials';
 
 const HomeScreen = () => {
-  const { pageNumber = 1, keyword } = useParams();  // Default page number to 1
+  const { pageNumber = 1, keyword } = useParams(); // Default page number to 1
 
   const { data, isLoading, error } = useGetProductsQuery({
     keyword,
-    pageNumber: parseInt(pageNumber),  // Ensure pageNumber is parsed as a number
+    pageNumber: parseInt(pageNumber), // Ensure pageNumber is parsed as a number
   });
 
   return (
@@ -50,6 +51,8 @@ const HomeScreen = () => {
           />
         </>
       )}
+      {/* Add Testimonials Section Below */}
+      <Testimonials />
     </>
   );
 };
