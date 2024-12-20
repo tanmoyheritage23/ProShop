@@ -69,3 +69,45 @@ table th {
 .testimonials .card img {
   border: 3px solid #007bff;
 }
+
+.promo-banner {
+  background-color: #5d88c5; /* Bootstrap primary color */
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.promo-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.promo-text {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.promo-btn {
+  background-color: #fff;
+  color: #007bff; /* Bootstrap primary color */
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.promo-btn:hover {
+  background-color: #cad6e2; /* Darker shade of primary color */
+  color: #fff;
+}
+
+.promo-image {
+  max-width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.promo-image:hover {
+  transform: scale(1.05);
+}
