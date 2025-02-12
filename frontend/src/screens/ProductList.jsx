@@ -5,7 +5,7 @@ import Product from '../components/Product';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Meta from '../components/Meta';
-import Paginate from '../components/Paginate';
+
 
 const ProductList = () => {
   const { keyword = '' } = useParams(); // Get keyword from URL
