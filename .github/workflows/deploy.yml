@@ -34,12 +34,12 @@ jobs:
 
       - name: Set Environment Variables
         run: |
-          echo "MONGO_URI=${{ vars.MONGO_URI }}" >> $GITHUB_ENV
-          echo "JWT_SECRET=${{ vars.JWT_SECRET }}" >> $GITHUB_ENV
-          echo "PAYPAL_CLIENT_ID=${{ vars.PAYPAL_CLIENT_ID }}" >> $GITHUB_ENV
-          echo "PAGINATION_LIMIT=${{ vars.PAGINATION_LIMIT }}" >> $GITHUB_ENV
-          echo "PAYPAL_APP_SECRET=${{ vars.PAYPAL_APP_SECRET }}" >> $GITHUB_ENV
-          echo "PAYPAL_API_URL=${{ vars.PAYPAL_API_URL }}" >> $GITHUB_ENV
+          echo "MONGO_URI=${{ secrets.MONGO_URI }}" >> $GITHUB_ENV
+          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> $GITHUB_ENV
+          echo "PAYPAL_CLIENT_ID=${{ secrets.PAYPAL_CLIENT_ID }}" >> $GITHUB_ENV
+          echo "PAGINATION_LIMIT=${{ secrets.PAGINATION_LIMIT }}" >> $GITHUB_ENV
+          echo "PAYPAL_APP_SECRET=${{ secrets.PAYPAL_APP_SECRET }}" >> $GITHUB_ENV
+          echo "PAYPAL_API_URL=${{ secrets.PAYPAL_API_URL }}" >> $GITHUB_ENV
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
