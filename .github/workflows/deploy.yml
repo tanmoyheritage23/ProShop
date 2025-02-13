@@ -40,6 +40,10 @@ jobs:
           echo "PAGINATION_LIMIT=${{ secrets.PAGINATION_LIMIT }}" >> $GITHUB_ENV
           echo "PAYPAL_APP_SECRET=${{ secrets.PAYPAL_APP_SECRET }}" >> $GITHUB_ENV
           echo "PAYPAL_API_URL=${{ secrets.PAYPAL_API_URL }}" >> $GITHUB_ENV
+          echo "AZURE_STORAGE_CONNECTION_STRING=${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}" >> $GITHUB_ENV
+          echo "AZURE_CONTAINER_NAME=${{ secrets.AZURE_CONTAINER_NAME }}" >> $GITHUB_ENV
+          echo "AZURE_STORAGE_ACCOUNT=${{ secrets.AZURE_STORAGE_ACCOUNT }}" >> $GITHUB_ENV
+          echo "NODE_ENV=${{ secrets.NODE_ENV }}" >> $GITHUB_ENV
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
