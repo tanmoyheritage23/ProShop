@@ -8,6 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: ProShop_Environment  # Reference the GitHub Environment
 
     steps:
       - name: Checkout Repository
@@ -31,12 +32,19 @@ jobs:
           cd frontend
           npm run build
 
+      - name: Set Environment Variables
+        run: |
+          echo "MONGO_URI=${{ vars.MONGO_URI }}" >> $GITHUB_ENV
+          echo "JWT_SECRET=${{ vars.JWT_SECRET }}" >> $GITHUB_ENV
+          echo "PAYPAL_CLIENT_ID=${{ vars.PAYPAL_CLIENT_ID }}" >> $GITHUB_ENV
+          echo "PAGINATION_LIMIT=${{ vars.PAGINATION_LIMIT }}" >> $GITHUB_ENV
+          echo "PAYPAL_APP_SECRET=${{ vars.PAYPAL_APP_SECRET }}" >> $GITHUB_ENV
+          echo "PAYPAL_API_URL=${{ vars.PAYPAL_API_URL }}" >> $GITHUB_ENV
+
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
           app-name: "ProShop"  # Change to your Azure App Service name
           slot-name: "production"
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: .
-
-      
+          package: ./build
