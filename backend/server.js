@@ -12,7 +12,7 @@ import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import cors from 'cors';
 
 
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 8080;
 
 connectDB();
 
