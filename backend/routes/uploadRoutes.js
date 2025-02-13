@@ -98,7 +98,7 @@ router.post('/', uploadSingleImage, async (req, res) => {
 
     res.status(200).send({
       message: 'Image uploaded successfully',
-      imageUrl, // Public URL of uploaded image
+      image:imageUrl, // Public URL of uploaded image
     });
   } catch (error) {
     console.error('Error uploading to Azure:', error.message);
